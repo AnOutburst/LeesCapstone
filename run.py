@@ -15,7 +15,7 @@ def runCalc():
 def runNote():
     print("not in yet")
     notePad = note.pad()
-    notePad.add_note()
+    # notePad.add_note()
     # notePad.say_notes()
 
 
