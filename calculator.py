@@ -1,6 +1,8 @@
 import tkinter
 
+
 class Calculator:
+
     def test(self):
         print("calc pressed")
 
