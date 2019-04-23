@@ -61,7 +61,7 @@ def clear():
 
 
 # Driver code
-if __name__ == "__main__":
+if __name__ == "calc":
     # create a GUI window
     gui = tkinter.Tk()
 
