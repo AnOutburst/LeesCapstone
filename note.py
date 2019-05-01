@@ -62,6 +62,7 @@ class pad:
     def add_note(self):
         #action = input("what would you like to say")
         action = str(self.e.get())
+        self.e.delete(0, 'end')
         self.c.execute("INSERT INTO notes VALUES (?)", (action,))
         self.conn.commit()
         self.refresh_notes()
