@@ -13,11 +13,10 @@ def runCalc():
     calc.test(calc)
 
 def runNote():
-    print("not in yet")
     notePad = note.pad()
-    # notePad.add_note()
-    # notePad.say_notes()
 
+def runsolitaire():
+    klondikesolitaire.initRun()
 
 
 if __name__ == '__main__':
@@ -31,11 +30,17 @@ if __name__ == '__main__':
 
     calcImg = tkinter.PhotoImage(file="calculator.png")
     noteImg = tkinter.PhotoImage(file="note.png")
+    solImg = tkinter.PhotoImage(file="solitaire.png")
     calcButton = tkinter.Button(window, image=calcImg, command=runCalc, bg="#008080")
     noteButton = tkinter.Button(window, image=noteImg, command=runNote, bg="#008080")
+    solButton = tkinter.Button(window, image=solImg, command=runsolitaire, bg="#008080")
     #label.grid(column=0, row=0)
-    calcButton.grid(column=0, row=1, ipadx=10, ipady=10)
-    noteButton.grid(column=0, row=2, ipadx=10, ipady=10)
+    #calcButton.grid(column=0, row=1, ipadx=10, ipady=10)
+    #noteButton.grid(column=0, row=2, ipadx=10, ipady=10)
+
+    calcButton.place(width=50, height=50, x=20, y=20)
+    noteButton.place(width=50, height=50, x=20, y=90)
+    solButton.place(width=50, height=50, x=20, y=160)
 
 
     window.mainloop()

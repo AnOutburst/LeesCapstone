@@ -719,11 +719,10 @@ class Stack:
     Transaction = "X"
 
 
-if __name__ == "__main__":
-    if sys.version_info >= (3, 0):
-        from tkinter import *
-    else:
-        from Tkinter import *
+from tkinter import *
+
+
+def initRun():
 
     root = Tk()
     myGame = Solitaire(root)

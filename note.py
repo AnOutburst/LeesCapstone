@@ -8,7 +8,6 @@ class pad:
     c = conn.cursor()
 
     def __init__(self):
-        print("hello")
         self.l = tkinter.StringVar()
         gui = tkinter.Tk()
         gui.configure(background="#008080")
