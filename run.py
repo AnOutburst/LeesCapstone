@@ -3,6 +3,7 @@ import sqlite3
 import calculator
 import note
 import klondikesolitaire
+import media
 
 #all code unless otherwise stated written by Lee Hayes for his capstone project
 #Klondike Solitaire is an opensource project created by artexcercise on github and can be found here
@@ -18,6 +19,9 @@ def runNote():
 def runsolitaire():
     klondikesolitaire.initRun()
 
+def runMedia():
+    mp3 = media.mp3()
+
 
 if __name__ == '__main__':
     conn = sqlite3.connect('note.db')
@@ -31,9 +35,12 @@ if __name__ == '__main__':
     calcImg = tkinter.PhotoImage(file="calculator.png")
     noteImg = tkinter.PhotoImage(file="note.png")
     solImg = tkinter.PhotoImage(file="solitaire.png")
+    mediaImg = tkinter.PhotoImage(file="music.png")
+
     calcButton = tkinter.Button(window, image=calcImg, command=runCalc, bg="#008080")
     noteButton = tkinter.Button(window, image=noteImg, command=runNote, bg="#008080")
     solButton = tkinter.Button(window, image=solImg, command=runsolitaire, bg="#008080")
+    mediaButton = tkinter.Button(window, image=mediaImg, command=runMedia, bg="#008080")
     #label.grid(column=0, row=0)
     #calcButton.grid(column=0, row=1, ipadx=10, ipady=10)
     #noteButton.grid(column=0, row=2, ipadx=10, ipady=10)
@@ -41,6 +48,7 @@ if __name__ == '__main__':
     calcButton.place(width=50, height=50, x=20, y=20)
     noteButton.place(width=50, height=50, x=20, y=90)
     solButton.place(width=50, height=50, x=20, y=160)
+    mediaButton.place(width=50, height=50, x=20, y=230)
 
 
     window.mainloop()
