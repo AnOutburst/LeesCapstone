@@ -36,6 +36,9 @@ if __name__ == '__main__':
     noteImg = tkinter.PhotoImage(file="note.png")
     solImg = tkinter.PhotoImage(file="solitaire.png")
     mediaImg = tkinter.PhotoImage(file="music.png")
+    fileImg = tkinter.PhotoImage(file="file.png")
+    playImg = tkinter.PhotoImage(file="play.png")
+    pauseImg = tkinter.PhotoImage(file="pause.png")
 
     calcButton = tkinter.Button(window, image=calcImg, command=runCalc, bg="#008080")
     noteButton = tkinter.Button(window, image=noteImg, command=runNote, bg="#008080")
