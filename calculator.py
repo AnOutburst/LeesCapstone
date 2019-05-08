@@ -34,67 +34,67 @@ class Calculator:
 
         self.equation.set('enter')
 
-        button1 = tkinter.Button(self.calcgui, text=' 1 ', fg='black', bg='red',
+        button1 = tkinter.Button(self.calcgui, text=' 1 ', fg='black', bg='white',
                                  command=lambda: self.doPress(1), height=1, width=7)
         button1.grid(row=2, column=0)
 
-        button2 = tkinter.Button(self.calcgui, text=' 2 ', fg='black', bg='red',
+        button2 = tkinter.Button(self.calcgui, text=' 2 ', fg='black', bg='white',
                                  command=lambda: self.doPress(2), height=1, width=7)
         button2.grid(row=2, column=1)
 
-        button3 = tkinter.Button(self.calcgui, text=' 3 ', fg='black', bg='red',
+        button3 = tkinter.Button(self.calcgui, text=' 3 ', fg='black', bg='white',
                                  command=lambda: self.doPress(3), height=1, width=7)
         button3.grid(row=2, column=2)
 
-        button4 = tkinter.Button(self.calcgui, text=' 4 ', fg='black', bg='red',
+        button4 = tkinter.Button(self.calcgui, text=' 4 ', fg='black', bg='white',
                                  command=lambda: self.doPress(4), height=1, width=7)
         button4.grid(row=3, column=0)
 
-        button5 = tkinter.Button(self.calcgui, text=' 5 ', fg='black', bg='red',
+        button5 = tkinter.Button(self.calcgui, text=' 5 ', fg='black', bg='white',
                                  command=lambda: self.doPress(5), height=1, width=7)
         button5.grid(row=3, column=1)
 
-        button6 = tkinter.Button(self.calcgui, text=' 6 ', fg='black', bg='red',
+        button6 = tkinter.Button(self.calcgui, text=' 6 ', fg='black', bg='white',
                                  command=lambda: self.doPress(6), height=1, width=7)
         button6.grid(row=3, column=2)
 
-        button7 = tkinter.Button(self.calcgui, text=' 7 ', fg='black', bg='red',
+        button7 = tkinter.Button(self.calcgui, text=' 7 ', fg='black', bg='white',
                                  command=lambda: self.doPress(7), height=1, width=7)
         button7.grid(row=4, column=0)
 
-        button8 = tkinter.Button(self.calcgui, text=' 8 ', fg='black', bg='red',
+        button8 = tkinter.Button(self.calcgui, text=' 8 ', fg='black', bg='white',
                                  command=lambda: self.doPress(8), height=1, width=7)
         button8.grid(row=4, column=1)
 
-        button9 = tkinter.Button(self.calcgui, text=' 9 ', fg='black', bg='red',
+        button9 = tkinter.Button(self.calcgui, text=' 9 ', fg='black', bg='white',
                                  command=lambda: self.doPress(9), height=1, width=7)
         button9.grid(row=4, column=2)
 
-        button0 = tkinter.Button(self.calcgui, text=' 0 ', fg='black', bg='red',
+        button0 = tkinter.Button(self.calcgui, text=' 0 ', fg='black', bg='white',
                                  command=lambda: self.doPress(0), height=1, width=7)
         button0.grid(row=5, column=0)
 
-        plus = tkinter.Button(self.calcgui, text=' + ', fg='black', bg='red',
+        plus = tkinter.Button(self.calcgui, text=' + ', fg='black', bg='white',
                               command=lambda: self.doPress("+"), height=1, width=7)
         plus.grid(row=2, column=3)
 
-        minus = tkinter.Button(self.calcgui, text=' - ', fg='black', bg='red',
+        minus = tkinter.Button(self.calcgui, text=' - ', fg='black', bg='white',
                                command=lambda: self.doPress("-"), height=1, width=7)
         minus.grid(row=3, column=3)
 
-        multiply = tkinter.Button(self.calcgui, text=' * ', fg='black', bg='red',
+        multiply = tkinter.Button(self.calcgui, text=' * ', fg='black', bg='white',
                                   command=lambda: self.doPress("*"), height=1, width=7)
         multiply.grid(row=4, column=3)
 
-        divide = tkinter.Button(self.calcgui, text=' / ', fg='black', bg='red',
+        divide = tkinter.Button(self.calcgui, text=' / ', fg='black', bg='white',
                                 command=lambda: self.doPress("/"), height=1, width=7)
         divide.grid(row=5, column=3)
 
-        equal = tkinter.Button(self.calcgui, text=' = ', fg='black', bg='red',
+        equal = tkinter.Button(self.calcgui, text=' = ', fg='black', bg='white',
                                command=self.doEqual, height=1, width=7)
         equal.grid(row=5, column=2)
 
-        clear = tkinter.Button(self.calcgui, text='Clear', fg='black', bg='red',
+        clear = tkinter.Button(self.calcgui, text='Clear', fg='black', bg='white',
                                command=self.clear, height=1, width=7)
         clear.grid(row=5, column='1')
 

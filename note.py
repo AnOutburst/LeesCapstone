@@ -20,7 +20,7 @@ class pad:
 
         #itemlist = tkinter.Label(gui, textVariable=self.l)
         self.scrollbar = tkinter.Scrollbar(gui, orient=tkinter.VERTICAL)
-        self.itemlist = tkinter.Listbox(gui, selectmode=tkinter.SINGLE, width=50, height=6,
+        self.itemlist = tkinter.Listbox(gui, selectmode=tkinter.SINGLE, width=50, height=32,
                                         yscrollcommand=self.scrollbar.set)
         self.scrollbar.config(command=self.itemlist.yview)
         #self.itemlist.pack()

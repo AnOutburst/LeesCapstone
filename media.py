@@ -14,6 +14,7 @@ class mp3:
         self.eemps.title("MP3 Player")
         self.eemps.geometry("500x130")
         self.v = tkinter.StringVar()
+        self.v.set(self.filename)
         self.plps = tkinter.StringVar()
         self.plps.set("pause")
         filebutton = tkinter.Button(self.eemps, command=self.chooseFile, bg="#008080", text="file")
@@ -22,13 +23,15 @@ class mp3:
         filebutton.place(width=30, height=30, x=20, y=20)
         pathLabel.place(width=400, height=30, x=70, y=20)
         self.play = tkinter.Button(self.eemps, command=self.playpauselogic, bg="#008080", textvariable=self.plps)
+        self.stop = tkinter.Button(self.eemps, command=self.stopMusic, bg="#008080", text="stop")
         self.play.place(width=40, height=40, x=20, y=70)
+        self.stop.place(width=40, height=40, x=80, y=70)
 
         self.eemps.mainloop()
 
     def chooseFile(self):
         self.eemps.update_idletasks()
-        self.filename = tkinter.filedialog.askopenfilename(initialdir="/", title="Select file",
+        self.filename = tkinter.filedialog.askopenfilename(initialdir="Music", title="Select file",
                                                            filetypes=(("MP3 files", "*.mp3"), ("All files", "*.*")))
         mixer.music.load(self.filename)
         mixer.music.set_volume(.1)
@@ -54,3 +57,10 @@ class mp3:
 
     def unpauseMusic(self):
         mixer.music.unpause()
+
+    def stopMusic(self):
+        mixer.music.stop()
+        self.paused = False
+        self.plps.set("pause")
+        self.filename = ""
+        self.v.set("No File Selected")
