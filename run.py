@@ -10,8 +10,7 @@ import media
 #github.com/artexercise/814446dc03189b5e41d7d04568254597
 
 def runCalc():
-    calc = calculator.Calculator
-    calc.test(calc)
+    calc = calculator.Calculator()
 
 def runNote():
     notePad = note.pad()
